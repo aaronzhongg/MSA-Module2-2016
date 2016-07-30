@@ -2,15 +2,33 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Jack to the choi</title>
         <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./js/script.ts"></script>
 
     </head>
 
     <body>
-
+        <h1 class="header">Hello</h1>
+        <hr>
+        <form>
+            Search:<br>
+            <input type="text" id="search"><br>
+            <input type="submit" value="Submit" onclick="submitButton(document.getElementById('search').value)">
+        </form>
+        <p id="label">...</p>
     </body>
 </html>
+
+<script>
+
+function submitButton(searchValue) {
+
+    alert(searchValue);
+    document.getElementById("label").innerHTML = searchValue;
+}
+
+</script>
