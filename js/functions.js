@@ -14,6 +14,7 @@ function submitButton(searchValue) {
         url: url,
         type: "GET",
         success: function (result) {
+            $("#itemTable tbody").empty();
             // alert(url)
             // document.getElementById("label").innerHTML = result.hits[0].fields.brand_name;
             // alert(results.hits[0].fields.brand_name + results.hits[0].fields.item_name )
