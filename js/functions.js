@@ -20,7 +20,7 @@ function submitButton(searchValue) {
             // alert(results.hits[0].fields.brand_name + results.hits[0].fields.item_name )
             // $("#itemTable tbody").append('<tr> <td>' + result.hits[0].fields.brand_name + '</td> <td>' + result.hits[0].fields.item_name + '</td> </tr>')
             for (var i = 0; i < result.total_hits; i++) {
-                $('#itemTable tbody').append('<tr> <td>' + result.hits[i].fields.brand_name + '</td> <td>' + result.hits[i].fields.item_name + '</td> </tr>');
+                $('#itemTable tbody').append('<tr> <td>' + result.hits[i].fields.brand_name + '</td> <td>' + result.hits[i].fields.item_name + '</td> <td>' + result.hits[i].fields.nf_total_carbohydrate + '</td> <td>' + result.hits[i].fields.nf_protein + '</td> <td>' + result.hits[i].fields.nf_total_fat + '</td> <td>' + result.hits[i].fields.nf_calories + '</td>  </tr>');
             }
             // $("#label").html(result);
         }
