@@ -31,6 +31,14 @@ automatically in just a few seconds.
     </head>
 
     <body style="padding:10px 50px">
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=293318247708378";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         <h1 class="header">Put my city on a hat. Put my city on the map</h1>
         <hr>
 
@@ -91,6 +99,8 @@ automatically in just a few seconds.
             </tbody>
         </table>
 
+
+<div class="fb-share-button" data-href="http://module2-az.azurewebsites.net" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmodule2-az.azurewebsites.net%2F&amp;src=sdkpreparse">Share</a></div>
     </body>
     
 </html>
@@ -100,4 +110,6 @@ automatically in just a few seconds.
         { 
             $('#itemTable').tablesorter();
         ); 
+
+        
  </script>
