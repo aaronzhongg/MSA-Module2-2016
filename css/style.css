@@ -1,9 +1,11 @@
 .header {
-    text-align: center
+    text-align: center;
+	color: black;
 }
 
-p {
-    color: blue;
+body {
+  font-family: futura;
+  background-color: whitesmoke;
 }
 
 /* tables */
