@@ -6,7 +6,7 @@ function submitButton(searchValue) {
     //document.getElementById("label").innerHTML = searchValue;
     var phrase = searchValue;
     var brand_id = "";
-    var results = "0%3A20";
+    var results = "0%3A50";
     var cal_min = 0;
     var cal_max = 50000;
     var fields = "*";
@@ -21,8 +21,14 @@ function submitButton(searchValue) {
             // alert(results.hits[0].fields.brand_name + results.hits[0].fields.item_name )
             // $("#itemTable tbody").append('<tr> <td>' + result.hits[0].fields.brand_name + '</td> <td>' + result.hits[0].fields.item_name + '</td> </tr>')
             for (var i = 0; i < result.total_hits; i ++) {
-                $('#itemTable tbody').append('<tr> <td>' + result.hits[i].fields.brand_name + '</td> <td>' + result.hits[i].fields.item_name + '</td> <td>' + result.hits[i].fields.nf_total_carbohydrate + '</td> <td>' + result.hits[i].fields.nf_protein + '</td> <td>' + result.hits[i].fields.nf_total_fat + '</td> <td>' + result.hits[i].fields.nf_calories + '</td>  </tr>')
+                $('#itemTable tbody').append('<tr> <td>' + result.hits[i].fields.brand_name + '</td> <td>' + result.hits[i].fields.item_name + '</td> <td>' + result.hits[i].fields.nf_serving_weight_grams + '</td> <td>' + result.hits[i].fields.nf_total_carbohydrate + '</td> <td>' + result.hits[i].fields.nf_protein + '</td> <td>' + result.hits[i].fields.nf_total_fat + '</td> <td>' + result.hits[i].fields.nf_calories + '</td>  </tr>')
             }
+             $('#itemTable').trigger("update"); 
+             var sorting = [0,0]; 
+             // sort on the first column 
+              $("#itemTable").trigger("sorton", [sorting]); 
+            //  return false; 
+            // $('#itemTable').tablesorter()
             // $("#label").html(result);
         }
 

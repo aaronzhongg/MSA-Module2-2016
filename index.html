@@ -2,38 +2,104 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Jack to the choi</title>
+        <title>Cypher Society</title>
         <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./js/functions.js"></script>
-
+        <script src="./js/__jquery.tablesorter/jquery-latest.js"></script> 
+        <script src="./js/__jquery.tablesorter/jquery.tablesorter.js"></script> 
+        <link 
+       
     </head>
 
-    <body>
-        <h1 class="header">Hello</h1>
+    <body style="padding:10px 50px">
+        <h1 class="header">Put my city on a hat. Put my city on the map</h1>
         <hr>
 
-        Search:<br>
-        <input type="text" id="search"><br>
-        <input type="submit" value="Submit" onclick="submitButton(document.getElementById('search').value)">
-        <br>
+        <div id="container" style="padding: 0px 0px 20px 0px">
+            <div style="display:inline-block">
+            Search:<br>
+            </div>
+
+            <div style="display:inline-block">
+            <input type="text" id="search"><br>
+            </div>
+<!--onclick="submitButton(document.getElementById('search').value)"-->
+            <div style="display:inline-block">
+            <input type="submit" value="Submit" onclick="submitButton(document.getElementById('search').value)">
+            </div>
+        </div>
         
-        <table style="width: 100%" id="itemTable">
+        <table style="width:100%" id="itemTable" class="tablesorter">
             <thead>
                 <tr>
                     <th>Brand Name</th>
                     <th>Item Name</th>
-                    <th>Carbohydrates</th>
-                    <th>Protein</th>
-                    <th>Fat</th>
+                    <th>Serving Size (g) </th>
+                    <th>Carbohydrates (g)</th>
+                    <th>Protein (g)</th>
+                    <th>Fat (g)</th>
                     <th>Calories</th>
                 </tr>
             </thead>
             <tbody>
+                <!--<tr>
+                    <td>Brand Name</td>
+                    <td>Item Name</td>
+                    <td>Serving Size (g) </td>
+                    <td>Carbohydrates (g)</td>
+                    <td>Protein (g)</td>
+                    <td>Fat (g)</td>
+                    <td>Calories</td>
+                </tr>
+                <tr>
+                    <td>Brand Name</td>
+                    <td>Item Name</td>
+                    <td>Serving Size (g) </td>
+                    <td>Carbohydrates (g)</td>
+                    <td>Protein (gdsa)</td>
+                    <td>Fat (g)</td>
+                    <td>Calories</td>
+                </tr>
+                <tr>
+                    <td>Brand Name</td>
+                    <td>Item Namedsa</td>
+                    <td>Serving Sdsaize (g) </td>
+                    <td>Carbohydrates (g)</td>
+                    <td>Protein (g)</td>
+                    <td>Fat (g)</td>
+                    <td>Calories</td>
+                </tr>-->
             </tbody>
         </table>
 
     </body>
+    
 </html>
+
+<script>
+    $(document).ready(function() 
+        { 
+            $('#itemTable').tablesorter();
+        ); 
+ </script>
+
+<!-- 
+To collect end-user usage analytics about your application, 
+insert the following script into each page you want to track.
+Place this code immediately before the closing </head> tag,
+and before any other scripts. Your first data will appear 
+automatically in just a few seconds.
+-->
+<script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+    }({
+        instrumentationKey:"a1ee6812-c349-441d-bccc-1bcf99a926fd"
+    });
+       
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+</script>
